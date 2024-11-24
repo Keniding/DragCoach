@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DragCoach</string>
+
+
+    <string name="add_player">Add Player</string>
+
+    <string name="add_home_player">Add Home Player</string>
+    <string name="add_away_player">Add Away Player</string>
+</resources>

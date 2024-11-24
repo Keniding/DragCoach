@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DragCoach" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/hardPrimary</item>
+        <item name="colorAccent">@color/softPrimary</item>
+        <item name="android:statusBarColor">@color/gray9</item>
+    </style>
+
+    <style name="Theme.DragCoach" parent="Base.Theme.DragCoach" />
+
+    <style name="etiqueta" parent="Base.Theme.DragCoach" >
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/gray9</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="textInputLayout" parent="Base.Theme.DragCoach">
+        <item name="hintEnabled">false</item>
+        <item name="errorEnabled">true</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="boxBackgroundColor">@color/blanco</item>
+        <item name="errorTextAppearance">@style/etiqueta</item>
+        <item name="errorTextColor">@color/rojo1</item>
+    </style>
+
+    <style name="textInputEditText" parent="Base.Theme.DragCoach">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColorHint">@color/gray9</item>
+    </style>
+
+    <style name="botonPrimary" parent="Base.Theme.DragCoach">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="rippleColor">@color/softPrimary</item>
+        <item name="iconTint">@color/blanco</item>
+    </style>
+
+    <style name="botonFondo" parent="Base.Theme.DragCoach">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="backgroundTint">@color/blanco</item>
+        <item name="rippleColor">@color/softPrimary</item>
+        <item name="iconTint">@color/primary</item>
+    </style>
+
+    <style name="tabText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="datePicker" parent="Base.Theme.DragCoach">
+        <item name="android:headerBackground">@color/blanco</item>
+        <item name="android:headerMonthTextAppearance">@style/etiqueta</item>
+    </style>
+</resources>

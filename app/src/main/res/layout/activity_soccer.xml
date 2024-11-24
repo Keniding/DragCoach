@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".soccer.SoccerActivity">
+
+    <!-- Título en la parte superior -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Soccer"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botones de guardar y cargar -->
+    <ImageButton
+        android:id="@+id/btnSave"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/elipse"
+        android:src="@drawable/ic_guardar"
+        app:tint="@color/primary"
+        android:contentDescription="Guardar formación"
+        app:layout_constraintEnd_toStartOf="@id/btnLoad"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btnLoad"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/elipse"
+        android:src="@drawable/ic_cargar"
+        app:tint="@color/primary"
+        android:contentDescription="Cargar formación"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Campo de fútbol ocupando el espacio central -->
+    <com.keniding.dragcoach.soccer.view.FieldView
+        android:id="@+id/fieldView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="36dp"
+        app:layout_constraintBottom_toTopOf="@id/fabContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- Contenedor para los FABs -->
+    <LinearLayout
+        android:id="@+id/fabContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabAddHomePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/add_home_player"
+            android:text="Local"
+            android:textColor="@color/white"
+            app:backgroundTint="#FF0000"
+            app:elevation="12dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconTint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabAddAwayPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/add_away_player"
+            android:text="Visitante"
+            android:textColor="@color/white"
+            app:backgroundTint="#0000FF"
+            app:elevation="12dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconTint="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
